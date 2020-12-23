@@ -18,15 +18,15 @@
         </div>
     </div>
     <!--Score and Timer -->
-    <div class="container">
+    <div class="container text-primary">
         <div class="row">
             <div class="col" id="Timer">
-              <h2>Timer</h2>
-              <h1>60</h1>
+                <h2>Timer</h2>
+                <h1 id="countdown">60</h1>
             </div>
             <div class="col" id="Score" style="text-align: right">
-               <h2>Score</h2>
-               <h1>0</h1>
+                <h2>Score</h2>
+                <h1>0</h1>
             </div>
         </div>
 
@@ -38,34 +38,34 @@
 
             <form class="quiz-form text-light">
                 <div class="my-5">
-                    </p>
+                    <h2 id="question"></h2>
                     <div class="form-check my-2 text-white-50">
                         <input type="radio" name="q1" checked>
-                        <label class="form-check-label"></label>
+                        <label class="choice form-check-label ">b</label>
                     </div>
                     <div class="form-check my-2 text-white-50">
                         <input type="radio" name="q2">
-                        <label class="form-check-label"></label>
+                        <label class="choice form-check-label">a</label>
                     </div>
                     <div class="form-check my-2 text-white-50">
                         <input type="radio" name="q3">
-                        <label class="form-check-label"></label>
+                        <label class="choice form-check-label">b</label>
                     </div>
                     <div class="form-check my-2 text-white-50">
                         <input type="radio" name="q4">
-                        <label class="form-check-label"></label>
+                        <label class="choice form-check-label">y</label>
                     </div>
                 </div>
 
                 <div class="text-center">
-                    <input type="submit" class="btn btn-light">
+                    <button type="button" class="btn btn-dark">Submit</button>
                 </div>
             </form>
 
         </div>
     </div>
 
-    <script src="hw.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
