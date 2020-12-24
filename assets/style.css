@@ -1,0 +1,45 @@
+.choice-container {
+  text-align: center;
+  font-size: 18px;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 black;
+  transform: scale(1.02);
+  transform: transform 100ms;
+}
+
+#question {
+  font-size: 30px;
+  text-align: center;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+#finalScore {
+  font-size: 80px;
+  text-align: center;
+  
+}
+
+#YouScored {
+    font-size: 80px;
+    
+}
+
+#end-text {
+    color: white;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+
+}
+
+#play-again {
+    text-align: center;
+}
