@@ -1,45 +1,46 @@
 const question = document.getElementById('question');
-let choices = document.getElementsByClassName('choice');
-console.log(choices);
+let choices = document.getElementsByClassName('.choice-text');
 let count = 60;
 let score = 0;
 let scoreText = document.getElementById('Score');
 const score_points = 100;
+let acceptingAnswers = true;
 const max_questions = 5;
 let questionCounter = 0;
+let availableQuestions = []
 
-const questions = [
+
+let questions = [
   {
     question: 'What can be used to store multiple values in a single variable?',
-    answerA: 'For Loop',
-    answerB: 'Object',
-    answerC: 'Array',
-    answerD: 'While Loop',
+    choiceA: 'For Loop',
+    choiceB: 'Object',
+    choiceC: 'Array',
+    choiceD: 'While Loop',
     correct: 3,
   },
   {
-    question:
-      'This type of loop executes a block of code as long as a specified question is TRUE',
-    answerA: 'For Loop',
-    answerB: 'While Loop',
-    answerC: 'if statement',
-    answerD: 'None of the above',
+    question: 'This type of loop executes a block of code as long as a specified question is TRUE',
+    choiceA: 'For Loop',
+    choiceB: 'While Loop',
+    choiceC: 'if statement',
+    choiceD: 'None of the above',
     correct: 2,
   },
   {
     question: 'This method rounds a number downward to its nearest integer',
-    a: 'Math Random',
-    b: 'Math Ceiling',
-    c: 'Math Trunc',
-    d: 'Math Floor',
+    choiceA: 'Math Random',
+    choiceB: 'Math Ceiling',
+    choiceC: 'Math Trunc',
+    choiceD: 'Math Floor',
     correct: 4,
   },
   {
     question: 'This is a container for storing data values',
-    a: 'variable',
-    b: 'sting',
-    c: 'array',
-    d: 'Integer',
+    choiceA: 'variable',
+    choiceB: 'sting',
+    choiceC: 'array',
+    choiceD: 'Integer',
     correct: 1,
   },
   {
@@ -49,7 +50,7 @@ const questions = [
     c: 'variable',
     d: 'Javascript',
     correct: 1,
-  },
+  }
 ];
 
 function startGame() {
@@ -59,7 +60,59 @@ function startGame() {
   newQuestion();
 }
 
-function newQuestion() {}
+function newQuestion() {
+  if(availableQuestions.length === 0 || questionCounter > max_questions) {
+    localStorage.setItem(score)
+  
+    return window.location.assign('/end.html')
+  }
+    questionCounter++
+    progressText.innerText = `Question ${questionCounter} of ${max_questions}`;
+
+    let questionsIndex = Math.floor(math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionsIndex]
+    question.innerText = currentQuestion.question
+
+    choices.forEach(function (choice) {
+        let num = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    })
+
+    availableQuestions.splice(questionsIndex, 1);
+
+    acceptingAnswers = true
+
+  choices.forEach(function (choice) {
+    choice.addEventListener('click', event => {
+      if(!acceptingAnswers) return
+
+      acceptingAnswers = false;
+      let selectedChoice = event.target;
+      let selectedAnswer = selectedChoice.dataset['number'];
+
+      let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+
+      if(classToApply === 'correct') {;
+          incrementScore(score_points);
+      }
+
+      selectedChoice.parentElement.classList.add(classToApply);
+
+      setTimeout(function () {
+        selectedChoice.parentElement.classList.remove(classToApply);
+        newQuestion();
+      
+
+    }, 1000);
+
+
+  });
+  
+};
+
+
+
+
 
 //Timer
 
