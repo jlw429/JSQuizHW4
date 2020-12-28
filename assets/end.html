@@ -13,25 +13,19 @@
 </head>
 
 <body>
-   <div class="intro py-3 bg-white text-center">
-       <div class="container">
-           <h1 id="YouScored" class="text-primary display-3 my-4">You Scored</h1>
-           <h1 id="finalScore" class="text-primary display-3 my-4">0</h1>
-       </div>
-   </div>
-      <div class="quiz py-4 bg-primary">
-          <div class="container">
-          <form class="end-form-container">
-               <h2 id="end-text">Enter your name below to save your score!</h2>
-               <input type="text" name="name" id="username" placeholder="Enter your name">
-               <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
-           </form>
-           <a href="quiz.html"><button type="button" id="play-again" class="btn btn-dark">Play Again</button></a>
-                
-            </div>
+    <div class="intro py-3 bg-white text-center">
+        <div class="container">
+            <h1 id="YouScored" class="text-primary display-3 my-4">You Scored</h1>
+            <h1 id="finalScore" class="text-primary display-3 my-4">0</h1>
         </div>
     </div>
-    <script src="end.js"</script>
+    <div class="quiz py-4 bg-primary">
+            <a href="quiz.html"><button type="button" id="playagain" class="btn btn-dark">Play Again</button></a>
+
+        </div>
+    </div>
+    </div>
+    <script src="end.js"></script>
 </body>
 
 </html>
