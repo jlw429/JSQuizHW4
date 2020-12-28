@@ -2,7 +2,7 @@
   text-align: center;
   font-size: 18px;
 }
-
+/* The coolest thing I figured out was this hover function.  */
 .choice-container:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 black;
@@ -39,6 +39,7 @@ form {
     text-align: center;
 
 }
-#playagain {
-  text-align: center
+#play-again {
+  text-align: center;
+  font-weight: bolder;
 }
