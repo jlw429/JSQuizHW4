@@ -16,22 +16,22 @@ The timer works correctly and reduces time if it is incorrect as well as local s
 This is all the webpages, along with the five questions. 
 
 Index Page
-![Index Page](assets\Document.png)
+![Index Page](https://github.com/jlw429/JSQuizHW4/blob/main/assets/Document.png)
 
 Question 1 of 5
-![Question1](assets\Q1.png)
+![Question1](https://github.com/jlw429/JSQuizHW4/blob/main/assets/Q1.png)
 
 Question 2 of 5
-![Questio2](assets\Q2.png)
+![Questio2](https://github.com/jlw429/JSQuizHW4/blob/main/assets/Q2.png)
 
 Question 3 of 5
-![Question3](assets\Q3.png)
+![Question3](https://github.com/jlw429/JSQuizHW4/blob/main/assets/Q3.png)
 
 Question 4 of 5
-![Question4](assets\Q4.png)
+![Question4](https://github.com/jlw429/JSQuizHW4/blob/main/assets/Q4.png)
 
 Question 5 of 5
-![Question5](assets\Q5.png)
+![Question5](https://github.com/jlw429/JSQuizHW4/blob/main/assets/Q5.png)
 
 End
-![End](assets\end.png)
+![End](https://github.com/jlw429/JSQuizHW4/blob/main/assets/End.png)
